@@ -1,8 +1,19 @@
+using EMSA.Data;
+using EMSA.Product;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var env = builder.Environment.EnvironmentName;
+var isDevelopment = builder.Environment.IsDevelopment();
+builder.Configuration.AddJsonFile("appsettings.json").AddJsonFile($"appsettings.{env}.json", optional: true);
+var connectionString = builder.Configuration.GetConnectionString("TenantConnection");
 
 // Add services to the container.
 
-builder.Services.AddControllersWithViews();
+builder.Services
+    .AddDataServices(connectionString, isDevelopment, isDevelopment)
+    .AddProductServices()
+    .AddControllersWithViews();
 
 var app = builder.Build();
 
@@ -22,6 +33,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action=Index}/{id?}");
 
-app.MapFallbackToFile("index.html"); ;
+app.MapFallbackToFile("index.html");
 
 app.Run();
