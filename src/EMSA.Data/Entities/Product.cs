@@ -8,6 +8,12 @@ namespace EMSA.Data.Entities
     public class Product : BaseEntity
     {
         public string ProductName { get; set; }
+
+        [Precision(14, 2)] public decimal WholeSalePrice { get; set; }
+
+        [Precision(14, 2)] public decimal SalePrice { get; set; }
+
+        [Precision(14, 2)] public decimal ImportPrice { get; set; }
     }
 
     public class ProductConfiguration : IEntityTypeConfiguration<Product>
