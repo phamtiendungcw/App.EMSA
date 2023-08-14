@@ -10,6 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Light.GuardClauses" Version="10.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.20" />
     <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.20" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.20">
       <PrivateAssets>all</PrivateAssets>
@@ -26,5 +28,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Product\EMSA.Product\EMSA.Product.csproj" />
+    <ProjectReference Include="..\Domain\User\EMSA.User\EMSA.User.csproj" />
   </ItemGroup>
 </Project>
