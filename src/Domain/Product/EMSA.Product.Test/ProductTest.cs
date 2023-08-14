@@ -5,7 +5,6 @@ namespace EMSA.Product.Test
         [Fact]
         public void Test1()
         {
-
         }
     }
 }

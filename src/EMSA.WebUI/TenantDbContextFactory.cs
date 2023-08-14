@@ -1,4 +1,4 @@
-﻿using EMSA.Data;
+﻿using EMSA.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
