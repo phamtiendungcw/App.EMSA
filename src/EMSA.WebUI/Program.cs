@@ -1,5 +1,8 @@
+using EMSA.Core;
 using EMSA.Infrastructure;
 using EMSA.Product;
+using EMSA.User;
+using EMSA.WebUI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,8 +14,11 @@ var connectionString = builder.Configuration.GetConnectionString("TenantConnecti
 // Add services to the container.
 
 builder.Services
+    .AddCoreServices(builder.Configuration)
+    .AddInternalServices()
     .AddInfrastructureServices(connectionString, isDevelopment, isDevelopment)
     .AddProductServices()
+    .AddUserServices()
     .AddControllersWithViews();
 
 var app = builder.Build();
