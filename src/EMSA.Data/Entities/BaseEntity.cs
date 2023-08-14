@@ -1,4 +1,4 @@
-﻿namespace EMSA.Data.Entities
+﻿namespace EMSA.Core.Entities
 {
     public class BaseEntity
     {

@@ -1,10 +1,9 @@
-﻿using EMSA.Data;
+﻿using EMSA.Infrastructure.Data;
 
 namespace EMSA.Product.Services
 {
     public interface IProductService
     {
-
     }
 
     public class ProductService : IProductService

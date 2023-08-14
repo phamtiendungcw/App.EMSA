@@ -1,13 +1,13 @@
-﻿using EMSA.Data.Entities;
+﻿using EMSA.Core.Entities;
+using EMSA.Infrastructure.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
 
-namespace EMSA.Data
+namespace EMSA.Infrastructure.Data
 {
     public class TenantDbContext : DbContext
     {
         public TenantDbContext(DbContextOptions<TenantDbContext> options) : base(options)
         {
-
         }
 
         public DbSet<Product> Products { get; set; }

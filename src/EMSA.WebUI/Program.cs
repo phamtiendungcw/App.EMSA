@@ -1,4 +1,4 @@
-using EMSA.Data;
+using EMSA.Infrastructure;
 using EMSA.Product;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +11,7 @@ var connectionString = builder.Configuration.GetConnectionString("TenantConnecti
 // Add services to the container.
 
 builder.Services
-    .AddDataServices(connectionString, isDevelopment, isDevelopment)
+    .AddInfrastructureServices(connectionString, isDevelopment, isDevelopment)
     .AddProductServices()
     .AddControllersWithViews();
 
@@ -27,7 +27,6 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-
 
 app.MapControllerRoute(
     name: "default",

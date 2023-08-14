@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSA.WebUI", "src\EMSA.WebUI\EMSA.WebUI.csproj", "{C9CBDE88-D408-41B9-8654-C88A90A9F774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSA.WebUI", "src\EMSA.WebUI\EMSA.WebUI.csproj", "{C9CBDE88-D408-41B9-8654-C88A90A9F774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSA.Data", "src\EMSA.Data\EMSA.Data.csproj", "{E34F629F-A7FE-41C5-8171-C1012BFFF7A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSA.Core", "src\EMSA.Data\EMSA.Core.csproj", "{E34F629F-A7FE-41C5-8171-C1012BFFF7A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{1AB0961C-3301-4216-8ACE-638289937054}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSA.Product", "src\Domain\Product\EMSA.Product\EMSA.Product.csproj", "{5BD85DAB-6385-4884-8B0A-011BA6054E87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSA.Product", "src\Domain\Product\EMSA.Product\EMSA.Product.csproj", "{5BD85DAB-6385-4884-8B0A-011BA6054E87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSA.Product.Test", "src\Domain\Product\EMSA.Product.Test\EMSA.Product.Test.csproj", "{2C47345F-C6A7-45BF-B628-9250FE5346A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSA.Product.Test", "src\Domain\Product\EMSA.Product.Test\EMSA.Product.Test.csproj", "{2C47345F-C6A7-45BF-B628-9250FE5346A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Product", "Product", "{7A4E886A-5BE5-43C1-B3DA-A3A5DBECFDD5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{5D4A271C-9CDB-47EF-9CA9-96B4EC3320F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSA.Common.Extensions", "src\Common\EMSA.Common.Extensions\EMSA.Common.Extensions.csproj", "{DA035686-2671-4339-B6F7-013E030F4667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSA.Common.Extensions", "src\Common\EMSA.Common.Extensions\EMSA.Common.Extensions.csproj", "{DA035686-2671-4339-B6F7-013E030F4667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSA.Common.Extensions.Files", "src\Common\EMSA.Common.Extensions.Files\EMSA.Common.Extensions.Files.csproj", "{484607DE-275A-4165-9A0E-C783DD98A0BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSA.Common.Extensions.Files", "src\Common\EMSA.Common.Extensions.Files\EMSA.Common.Extensions.Files.csproj", "{484607DE-275A-4165-9A0E-C783DD98A0BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSA.Infrastructure", "src\EMSA.Infrastructure\EMSA.Infrastructure.csproj", "{4A3F17D0-C369-4AA6-AB76-FF9B49445FEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{484607DE-275A-4165-9A0E-C783DD98A0BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{484607DE-275A-4165-9A0E-C783DD98A0BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{484607DE-275A-4165-9A0E-C783DD98A0BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A3F17D0-C369-4AA6-AB76-FF9B49445FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A3F17D0-C369-4AA6-AB76-FF9B49445FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A3F17D0-C369-4AA6-AB76-FF9B49445FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A3F17D0-C369-4AA6-AB76-FF9B49445FEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

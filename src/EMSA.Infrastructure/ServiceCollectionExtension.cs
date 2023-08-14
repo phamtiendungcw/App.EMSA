@@ -1,12 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EMSA.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics;
 
-namespace EMSA.Data
+namespace EMSA.Infrastructure
 {
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection AddDataServices(this IServiceCollection services, string connectionString,
+        public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, string connectionString,
             bool sensitiveDataLogging, bool detailError)
         {
             return services
