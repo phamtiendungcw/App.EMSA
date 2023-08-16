@@ -25,13 +25,14 @@ namespace EMSA.WebUI.Services
             _tokenOptions.Issuer.MustNotBeNullOrEmpty();
             _tokenOptions.Audience.MustNotBeNullOrEmpty();
         }
+
         public string GetToken(UserToken user, int expiryMinutes = 0)
         {
             var claims = new List<Claim>()
             {
-                new Claim(ClaimTypes.NameIdentifier,user.Username),
-                new Claim(ClaimTypes.Name,user.FullName),
-                new Claim(ClaimTypes.Role,"user"), // TODO: set user role
+                new Claim(ClaimTypes.NameIdentifier, user.Username),
+                new Claim(ClaimTypes.Name, user.FullName),
+                new Claim(ClaimTypes.Role, "user"), // TODO: set user role
             };
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_tokenOptions.SecurityKey));
 
