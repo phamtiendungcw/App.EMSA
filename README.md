@@ -1,5 +1,3 @@
-# Hệ thống quản lý bán hàng
-
 <h1 align="center">Hi there 👋, I'm Pham Tien Dung</h1>
 <h3 align="center">A passionate .net developer from Vietnam</h3>
 
