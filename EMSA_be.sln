@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSA.WebUI", "src\EMSA.WebUI\EMSA.WebUI.csproj", "{C9CBDE88-D408-41B9-8654-C88A90A9F774}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSA.Core", "src\EMSA.Data\EMSA.Core.csproj", "{E34F629F-A7FE-41C5-8171-C1012BFFF7A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSA.Core", "src\EMSA.Core\EMSA.Core.csproj", "{E34F629F-A7FE-41C5-8171-C1012BFFF7A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{1AB0961C-3301-4216-8ACE-638289937054}"
 EndProject
@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSA.Infrastructure", "src\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{4F8266F4-380A-4D1D-BE4C-9F6A389594B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSA.User", "src\Domain\User\EMSA.User\EMSA.User.csproj", "{0F4C4CDE-F37B-4E4A-8884-C4795E184647}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSA.User", "src\Domain\User\EMSA.User\EMSA.User.csproj", "{0F4C4CDE-F37B-4E4A-8884-C4795E184647}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

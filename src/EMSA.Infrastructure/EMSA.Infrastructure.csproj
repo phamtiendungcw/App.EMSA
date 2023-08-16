@@ -12,7 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\EMSA.Data\EMSA.Core.csproj" />
+	  <ProjectReference Include="..\EMSA.Core\EMSA.Core.csproj" />
 	</ItemGroup>
 
 </Project>
