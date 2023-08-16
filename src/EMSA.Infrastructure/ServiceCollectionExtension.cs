@@ -7,7 +7,8 @@ namespace EMSA.Infrastructure
 {
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, string connectionString,
+        public static IServiceCollection AddInfrastructureServices(this IServiceCollection services,
+            string connectionString,
             bool sensitiveDataLogging, bool detailError)
         {
             return services
