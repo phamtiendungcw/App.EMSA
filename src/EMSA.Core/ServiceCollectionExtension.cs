@@ -1,16 +1,37 @@
-﻿using EMSA.Core.Settings;
-using Microsoft.Extensions.Configuration;
+﻿using EMSA.Core.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics;
 
 namespace EMSA.Core
 {
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection AddCoreServices(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddCoreServices(this IServiceCollection services,
+            string connectionString, bool sensitiveDataLogging, bool detailError)
         {
-            services.AddOptions<TokenSetting>("JwtToken");
+            return services
+                .AddTenantContext(connectionString, sensitiveDataLogging, detailError)
+                .AddScoped<ITenantDbContextFactory, TenantDbContextFactory>();
+        }
 
-            return services;
+        private static IServiceCollection AddTenantContext(this IServiceCollection services, string connectionString,
+            bool sensitiveDataLogging, bool detailError)
+        {
+#if DEBUG
+            sensitiveDataLogging = true;
+            detailError = true;
+#endif
+
+            return services.AddDbContextFactory<TenantDbContext>(builder =>
+            {
+                builder.UseSqlServer(connectionString)
+                    .EnableDetailedErrors(detailError)
+                    .EnableSensitiveDataLogging(sensitiveDataLogging)
+#if DEBUG
+                    .LogTo(x => Debug.WriteLine(x));
+#endif
+            });
         }
     }
 }

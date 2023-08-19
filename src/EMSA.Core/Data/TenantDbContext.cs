@@ -1,8 +1,8 @@
-﻿using EMSA.Core.Entities;
-using EMSA.Infrastructure.Data.Configurations;
+﻿using EMSA.Core.Data.Configurations;
+using EMSA.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace EMSA.Infrastructure.Data
+namespace EMSA.Core.Data
 {
     public class TenantDbContext : DbContext
     {

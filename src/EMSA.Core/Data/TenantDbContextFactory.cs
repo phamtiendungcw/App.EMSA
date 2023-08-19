@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace EMSA.Infrastructure.Data
+namespace EMSA.Core.Data
 {
     public interface ITenantDbContextFactory : IDbContextFactory<TenantDbContext>
     {
