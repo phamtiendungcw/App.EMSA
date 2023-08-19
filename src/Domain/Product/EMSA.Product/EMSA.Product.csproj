@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\EMSA.Data\EMSA.Core.csproj" />
     <ProjectReference Include="..\..\..\EMSA.Infrastructure\EMSA.Infrastructure.csproj" />
   </ItemGroup>
 

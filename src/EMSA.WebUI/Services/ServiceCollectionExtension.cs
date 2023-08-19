@@ -2,9 +2,11 @@
 {
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection AddInternalServices(this IServiceCollection services)
+        public static IServiceCollection AddInternalServices(this IServiceCollection services, IConfiguration config)
         {
-            return services.AddScoped<ITokenService, TokenService>();
+            return services
+                .Configure<TokenSetting>(config.GetSection("JwtToken"))
+                .AddScoped<ITokenService, TokenService>();
         }
     }
 }

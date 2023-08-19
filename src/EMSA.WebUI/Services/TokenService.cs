@@ -1,5 +1,4 @@
-﻿using EMSA.Core.Settings;
-using EMSA.User.Models;
+﻿using EMSA.User.Models;
 using Light.GuardClauses;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;

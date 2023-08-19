@@ -2,13 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace EMSA.Infrastructure.Data.Configurations
+namespace EMSA.Core.Data.Configurations
 {
     public class ProductConfiguration : IEntityTypeConfiguration<Product>
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.ToTable("Product", "product");
+            builder.ToTable("Products", "product");
             builder.Property(x => x.ProductName).IsRequired().HasMaxLength(250);
             builder.HasIndex(x => x.ProductName).IsUnique();
             builder.Property(x => x.WholeSalePrice).HasPrecision(18, 2);
