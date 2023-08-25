@@ -29,5 +29,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Domain\Product\EMSA.Product\EMSA.Product.csproj" />
     <ProjectReference Include="..\Domain\User\EMSA.User\EMSA.User.csproj" />
+    <ProjectReference Include="..\EMSA.Core\EMSA.Core.csproj" />
   </ItemGroup>
 </Project>

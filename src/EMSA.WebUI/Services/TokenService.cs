@@ -8,16 +8,16 @@ using System.Text;
 
 namespace EMSA.WebUI.Services
 {
-    public interface ITokenService
+    public interface ITokenGeneratorService
     {
         string GetToken(UserToken user, int expiryMinutes = 0);
     }
 
-    public class TokenService : ITokenService
+    public class TokenGeneratorService : ITokenGeneratorService
     {
         private readonly TokenSetting _tokenOptions;
 
-        public TokenService(IOptions<TokenSetting> tokenOptions)
+        public TokenGeneratorService(IOptions<TokenSetting> tokenOptions)
         {
             _tokenOptions = tokenOptions.Value;
             _tokenOptions.SecurityKey.MustNotBeNullOrEmpty();

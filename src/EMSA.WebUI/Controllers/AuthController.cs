@@ -9,12 +9,12 @@ namespace EMSA.WebUI.Controllers
     public class AuthController : ApplicationBaseController
     {
         private readonly IUserService _userService;
-        private readonly ITokenService _tokenService;
+        private readonly ITokenGeneratorService _tokenGeneratorService;
 
-        public AuthController(IUserService userService, ITokenService tokenService)
+        public AuthController(IUserService userService, ITokenGeneratorService tokenGeneratorService)
         {
             _userService = userService;
-            _tokenService = tokenService;
+            _tokenGeneratorService = tokenGeneratorService;
         }
 
         [HttpPost]
@@ -30,9 +30,9 @@ namespace EMSA.WebUI.Controllers
             var valid = await _userService.IsValidUserAccountAsync(user);
             if (valid)
             {
-                var userToken = await _userService.GetUserTokenInfoAsync(user.Username); // TODO: load user
+                var userInfo = await _userService.GetUserInfoAsync(user.Username); // TODO: load user
                 // Generate token and return
-                var token = _tokenService.GetToken(userToken, 0); // TODO: Get expiry minutes
+                var token = _tokenGeneratorService.GetToken(userInfo); // TODO: Get expiry minutes
                 return Ok(new
                 {
                     token,
