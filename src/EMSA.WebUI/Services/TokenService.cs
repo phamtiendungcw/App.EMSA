@@ -33,6 +33,12 @@ namespace EMSA.WebUI.Services
                 new Claim(ClaimTypes.Name, user.FullName),
                 new Claim(ClaimTypes.Role, "user"), // TODO: set user role
             };
+
+            if (expiryMinutes == 0)
+            {
+                expiryMinutes = _tokenOptions.ExpiryMinutes;
+            }
+
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_tokenOptions.SecurityKey));
 
             var token = new JwtSecurityToken(
