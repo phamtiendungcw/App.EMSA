@@ -1,6 +1,7 @@
 ﻿using EMSA.User.Models;
 using EMSA.User.Services;
 using EMSA.WebUI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EMSA.WebUI.Controllers
@@ -16,14 +17,20 @@ namespace EMSA.WebUI.Controllers
             _tokenService = tokenService;
         }
 
-        //[HttpPost]
+        [HttpPost]
         [Route("login")]
-        public async Task<IActionResult> Login(User.Models.UserLogin user)
+        [AllowAnonymous]
+        public async Task<IActionResult> Login(UserLogin user)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
             var valid = await _userService.IsValidUserAccountAsync(user);
             if (valid)
             {
-                var userToken = new UserToken(); // TODO: load user
+                var userToken = await _userService.GetUserTokenInfoAsync(user.Username); // TODO: load user
                 // Generate token and return
                 var token = _tokenService.GetToken(userToken, 0); // TODO: Get expiry minutes
                 return Ok(new

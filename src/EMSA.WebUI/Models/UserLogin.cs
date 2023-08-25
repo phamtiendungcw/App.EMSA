@@ -1,4 +1,4 @@
-﻿namespace EMSA.WebUI.Model
+﻿namespace EMSA.WebUI.Models
 {
     public class UserLogin
     {
