@@ -1,0 +1,14 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" formControlName="username" />
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" formControlName="password" />
+  </div>
+  <label for="username">Username</label>
+  <input type="text" class="form-control" />
+
+  <div><button type="button" class="btn btn-primary" (click)="submit()"></button>Submit</div>
+</form>
