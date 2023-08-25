@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UnauthorizedRoutingModule } from './unauthorized-routing.module';
 import { UnauthorizedComponent } from './unauthorized.component';
 import { LoginComponent } from './login/login.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
