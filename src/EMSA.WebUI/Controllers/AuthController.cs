@@ -30,9 +30,9 @@ namespace EMSA.WebUI.Controllers
             var valid = await _userService.IsValidUserAccountAsync(user);
             if (valid)
             {
-                var userToken = await _userService.GetUserTokenInfoAsync(user.Username); // TODO: load user
+                var userInfo = await _userService.GetUserInfoAsync(user.Username); // TODO: load user
                 // Generate token and return
-                var token = _tokenGeneratorService.GetToken(userToken, 0); // TODO: Get expiry minutes
+                var token = _tokenGeneratorService.GetToken(userInfo); // TODO: Get expiry minutes
                 return Ok(new
                 {
                     token,
